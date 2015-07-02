@@ -9,7 +9,8 @@ public class Event : IComparable
 	private DateTime date;
 	private String title;
 	private String location;
-    private Event(DateTime date, String title, String location)
+    
+    public Event(DateTime date, String title, String location)
     {
 		this.date = date;
 		this.title = title;
@@ -49,14 +50,16 @@ public class Event : IComparable
         {
             toString.Append(" | " + location);
         }
+
 		return toString.ToString();
 	}
 }
 
 public class Program
 {
-	public static StringBuilder output = new StringBuilder();
-	public static class Messages
+	private static StringBuilder output = new StringBuilder();
+	
+    public static class Messages
 	{
 		public static void EventAdded()
 		{ 
@@ -91,8 +94,8 @@ public class Program
 
     public class EventHolder
 	    {
-		    MultiDictionary<string, Event> byTitle = new MultiDictionary<string, Event>(true);
-		    OrderedBag<Event> byDate = new OrderedBag<Event>();
+		    private MultiDictionary<string, Event> byTitle = new MultiDictionary<string, Event>(true);
+		    private OrderedBag<Event> byDate = new OrderedBag<Event>();
 
 	        public void AddEvent(DateTime date, string title, string location)
 		    {
@@ -111,6 +114,7 @@ public class Program
 				    removed++;
 				    byDate.Remove(eventToRemove);
 			    }
+
 			    byTitle.Remove(title);
 			    Messages.EventDeleted(removed); 
 		    }
@@ -125,9 +129,11 @@ public class Program
                     {
                         break;
                     }
+
 				    Messages.PrintEvent(eventToShow);
 				    showed++;
 			    }
+
                 if (showed == 0)
                 {
                     Messages.NoEventsFound();
@@ -135,13 +141,14 @@ public class Program
 		    }
 	    } 
 
-    static EventHolder events = new EventHolder();
+    private static EventHolder events = new EventHolder();
 
-    static void Main(string[] args) 
+    public static void Main(string[] args) 
     {
 		while (ExecuteNextCommand()) 
         { 
         }
+
 		Console.WriteLine(output);
 	}
 
@@ -153,20 +160,24 @@ public class Program
             AddEvent(command);
             return true;
         }
+
 		if (command[0] == 'D')
         {
             DeleteEvents(command);
             return true;
         }
+
 		if (command[0] == 'L')
         {
             ListEvents(command);
             return true;
         }
+
 		if (command[0] == 'E')
         {
             return false;
         }
+
 		return false;
 	}
 
