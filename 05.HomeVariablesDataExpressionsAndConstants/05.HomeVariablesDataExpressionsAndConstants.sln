@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1.Rotating", "Task1.Rotating\Task1.Rotating.csproj", "{ECECA197-9F7B-4363-A016-2368A77D012F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2.Printer", "Task2.Printer\Task2.Printer.csproj", "{4DCA9640-A304-433E-B114-A9C8F46AA3F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{ECECA197-9F7B-4363-A016-2368A77D012F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECECA197-9F7B-4363-A016-2368A77D012F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECECA197-9F7B-4363-A016-2368A77D012F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DCA9640-A304-433E-B114-A9C8F46AA3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCA9640-A304-433E-B114-A9C8F46AA3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCA9640-A304-433E-B114-A9C8F46AA3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCA9640-A304-433E-B114-A9C8F46AA3F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
